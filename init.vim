@@ -7,7 +7,7 @@ set showcmd
 set ruler
 set encoding=utf-8
 set showmatch
-set sw=2
+" set sw=2
 set relativenumber
 set laststatus
 set noshowmode
@@ -37,6 +37,9 @@ nmap <Leader>nt :NERDTreeFind<CR>
 nmap <CR> o<Esc>
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+nmap <Leader>cc I/*<Esc>A*/<Esc>
+nmap <Tab> I<Tab><Esc>
+nmap <BS> a<BS><Esc>
 imap jj <Esc>
 imap <A-j> <Down>
 imap <A-k> <Up>
