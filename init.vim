@@ -16,9 +16,17 @@ set noshowmode
 call plug#begin('~/.config/nvim/plugged')
 
 " Themes
+
+" sonokai theme
+Plug 'sainnhe/sonokai'
+
+" gruvbox theme
 Plug 'morhetz/gruvbox'
 
+" tokyonight theme
+
 "IDE
+Plug 'Yggdroot/indentLine'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
@@ -26,8 +34,19 @@ Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
+" config for sonokai theme
+if has('termguicolors')
+      set termguicolors
+endif
+" let g:sonokai_style = 'espresso'
+" let g:sonokai_style = 'andromeda'
+ let g:sonokai_style = 'maia'
+colorscheme sonokai
+
+" config for gruvbox theme
+" colorscheme gruvbox
+" let g:gruvbox_contrast_dark = "hard"
+
 let NERDTreeQuitOnOpen=1
 
 let mapleader=" "
