@@ -12,10 +12,11 @@ set relativenumber
 set laststatus
 set noshowmode
 
+"_________________PLUGINS BEGIN_________________
 
 call plug#begin('~/.config/nvim/plugged')
 
-" Themes
+" THEMES
 
 " sonokai theme
 Plug 'sainnhe/sonokai'
@@ -23,27 +24,46 @@ Plug 'sainnhe/sonokai'
 " gruvbox theme
 Plug 'morhetz/gruvbox'
 
+"Ayu theme
+Plug 'ayu-theme/ayu-vim'
+
 " tokyonight theme
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 "IDE
+"indentetion lines
 Plug 'Yggdroot/indentLine'
+"allows to find by two chars
 Plug 'easymotion/vim-easymotion'
+"allows to display a tree to open other files without close neovim
 Plug 'scrooloose/nerdtree'
+"allows to navigate between windows open by nerdtree
 Plug 'christoomey/vim-tmux-navigator'
+"auto close some pairs
 Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
-" config for sonokai theme
-if has('termguicolors')
-      set termguicolors
-endif
+"_________________THEMES CONFIG____________________
+
+set termguicolors     " enable true colors support
+
+"----------CONFIG FOR AYU THEME--------------
+"let ayucolor="light"  " for light version of theme
+"let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
+
+"---------CONFIG FOR SONOKAI THEME-----------
 " let g:sonokai_style = 'espresso'
 " let g:sonokai_style = 'andromeda'
- let g:sonokai_style = 'maia'
-colorscheme sonokai
+" let g:sonokai_style = 'maia'
+"colorscheme sonokai
 
-" config for gruvbox theme
+" --------TOKYONIGHT THEME CONFIG-----------
+"colorscheme tokyonight
+
+" --------CONFIG FOR GRUVBOX THEME--------
 " colorscheme gruvbox
 " let g:gruvbox_contrast_dark = "hard"
 
